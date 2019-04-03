@@ -2,6 +2,32 @@
 var vowels = ["a", "e", "o", "u", "i", "A", "E", "I", "O", "U"]
 var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s" , "t", "v", "w", "x", "y", "z", "B", "V", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
 
+function translateWord(userInput) {
+
+  var userInput = "farts";
+  var userInputArray = userInput.split("");
+  console.log(userInput);
+  console.log(userInputArray);
+
+  if (vowels.includes(userInputArray[0])) {
+    userInputArray = userInputArray.join("") + "way";
+    $(".pigLatinResult").text(userInputArray);
+    $("#positiveResult").show();
+    console.log(userInputArray);
+  } else
+  var stop = 0
+  while(!vowels.includes(userInputArray[stop])){
+    stop++;
+  }
+  var output = userInputArray.slice(stop).join("") + userInputArray.slice(0, stop).join("") + "ay";
+  //this line does what we tried below
+  // var moveConsonents = userInputArray.slice(0, stop);
+  // var newUserInputArray =
+  // userInputArray.join("") + moveConsonents + "ay";
+  $(".pigLatinResult").text(output);
+  $("#positiveResult").show();
+  console.log(output);
+}
 
 
 //user interface logic
@@ -11,47 +37,7 @@ $(document).ready(function() {
     var userInput = $("#userInput").val();
     var userInputArray = userInput.split("");
     // var result = pigLatinWord(userInput);
-    console.log(userInput, userInputArray)
-    if (vowels.includes(userInputArray[0])) {
-        userInputArray = userInputArray.join("") + "way";
-        $(".pigLatinResult").text(userInputArray);
-        $("#positiveResult").show();
-        console.log(userInputArray);
-    } else {
-      return;
-    }
+    // console.log(userInput, userInputArray)
+
   });
 });
-
-
-// userInput + "way"
-//
-// userInput = "grunt"
-//
-// change "grunt" into array ("")
-// userInput = ["g", 'r', 'u', 'n', "t"]
-// compare to vowels arry, move each non match to the end of userInput array - stop at vowel
-// push "a" "y" ["g", 'r', 'u', 'n', "t"]
-//  to a string
-
-
-
-// for (var index = 0; index < userInputArray.length; index += 1) {
-// var pigLatinWord = function(userInput) {
-//   if (userInput.indexOf(0) === "a", {
-//     return true;
-//   } else {
-//
-//     return false;
-//   }
-// };
-// if (!result) {  // !result is the same as (result === false)
-//   $(".positiveResult").show();
-//   $(".pigLatinWord").text("not ");
-// } else {
-//   $(".positiveResult").show();
-//   var
-//   $(".not").text("");
-// }
-//
-// $("#result").show();
