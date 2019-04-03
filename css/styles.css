@@ -1,3 +1,7 @@
-#result {
+#positiveResult {
+  display: none;
+}
+
+#negativeResult {
   display: none;
 }

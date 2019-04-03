@@ -1,24 +1,29 @@
 // business logic
-var leapYear = function(year) {
-  if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+var vowels = ["a", "e", "o", "u", "i", "A", "E", "I", "O", "U"]
+
+var pigLatinWord = function(word) {
+  if (englishWord.indexOf(0) === "a", {
     return true;
   } else {
+
     return false;
   }
 };
 
 //user interface logic
 $(document).ready(function() {
-  $("form#leap-year").submit(function(event) {
+  $("form#pigLatin").submit(function(event) {
     event.preventDefault();
-    var year = parseInt($("input#year").val());
-    var result = leapYear(year);
+    var word = $("#englishWord").val();
+    var result = pigLatinWord(word);
 
-    $(".year").text(year);
 
     if (!result) {  // !result is the same as (result === false)
-      $(".not").text("not ");
+      $(".positiveResult").show();
+      $(".pigLatinWord").text("not ");
     } else {
+      $(".positiveResult").show();
+      var
       $(".not").text("");
     }
 

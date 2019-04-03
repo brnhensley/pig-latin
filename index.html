@@ -9,10 +9,21 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pig Latin Translator! 🐷  oink!</h1>
-        <form class="" action="index.html" method="post">
+      <h1>Pig Latin Translator! 🐷  oinkay!</h1>
 
+        <form id="pigLatin">
+          <div class="form-group">
+            <label for="englishWord">Enter an English word here to see what it would be in igpay atinlay!</label>
+            <input id="englishWord" type="text" placeholder="your word here">
+          </div>
+
+          <button type="submit" name="btn">Find out!</button>
         </form>
+
+        <div id="result">
+          <p id=positiveResult>Your word in pig latin is <span class="pigLatinResult"></span> !</p>
+          <p id="negativeResultpos"><span class="notWord"></span> is not a Pig-Latinable word.</p>
+        </div>
     </div>
   </body>
 </html>
