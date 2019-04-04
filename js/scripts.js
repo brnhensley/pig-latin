@@ -27,7 +27,6 @@ function translateWord(userInput) {
   return output;
 }
 
-
 //user interface logic
 $(document).ready(function() {
   $("form#pigLatin").submit(function(event) {
