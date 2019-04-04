@@ -1,9 +1,8 @@
 // business logic
 var vowels = ["a", "e", "o", "u", "i", "A", "E", "I", "O", "U"]
-// var consonants = ["b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s" , "t", "v", "w", "x", "y", "z", "B", "V", "D", "F", "G", "H", "J", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "X", "Y", "Z"]
 
 function translateWord(userInput) {
-  var userInput = "farts";
+  var userInput = "sharts";
   var userInputArray = userInput.split("");
   console.log(userInput);
   console.log(userInputArray);
@@ -14,16 +13,18 @@ function translateWord(userInput) {
     $("#positiveResult").show();
     console.log(userInputArray);
   } else
-  var stop = 0
-  while(!vowels.includes(userInputArray[stop])){
-    stop++;
-  }
+    //this loop acts like a for loop, incrimentally increasing the stop variable until we hit a vowel
+    var stop = 0
+    while(!vowels.includes(userInputArray[stop])){
+      stop++;
+    }
+
   var output = userInputArray.slice(stop).join("") + userInputArray.slice(0, stop).join("") + "ay";
-  return output;
   //this line does what we tried below
   // var moveConsonents = userInputArray.slice(0, stop);
   // var newUserInputArray =
   // userInputArray.join("") + moveConsonents + "ay";
+  return output;
 }
 
 
