@@ -1,4 +1,4 @@
-# Leap Year Determiner
+# Pig Latin Translator
 ***
 
 #### _A Pig Latin Translator, 4-3-19
